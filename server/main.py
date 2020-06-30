@@ -28,7 +28,7 @@ def get_main_api(page = 1):
 
 	data = [data[i:i+10] for i in range(0, len(data), 10)]
 
-	return json.dumps(data[page - 1 if page - 1 <= len(data) else len(data) - 1])
+	return json.dumps(data[page - 1 if page <= len(data) else len(data) - 1])
 
 if __name__ == '__main__':
 	app.run(debug=True)
