@@ -20,6 +20,8 @@
 		display: table;
 		padding-bottom: 40px;
 
+		font-weight: 700;
+
 		font-family: 'Montserrat', sans-serif;
 		color: #57E3F4;
         background: linear-gradient(to top, rgba(87, 227, 244,0.5) 0%,#ffffff 50%);
@@ -32,6 +34,10 @@
         display: table-cell;
         vertical-align: middle;	
     }
+	.croco-card div h3{
+		font-weight: 700;
+		font-family: 'Montserrat', sans-serif;
+	}
 	.croco-card div input{
         box-shadow: 0 0px 10px rgba(0,0,0,0.15);
         border: none;
@@ -39,7 +45,7 @@
 		/* height: 30%; */
 		font-size: 120%;
 		padding: 10px;
-		color: #333;
+		color: #133236;
     }
 	.croco-card div input:focus{
 		outline: none;
