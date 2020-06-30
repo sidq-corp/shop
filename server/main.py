@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-	return url_for('get_main_api', page = 1) + ' ' + url_for('add_pr', json_data = 'ss')
+	return url_for('get_main_api', page = 1) + ' ' + url_for('add_pr', json_data = '[1,1,1]')
 
 @app.route('/add_pr/<json_data>')
 def add_pr(json_data):
@@ -27,9 +27,10 @@ def get_main_api(page = 1):
 		data = json.load(full)
 
 	data = [data[i:i+10] for i in range(0, len(data), 10)]
-
-	return json.dumps(data[page - 1 if page <= len(data) else len(data) - 1])
-
+	try:
+		return json.dumps(data[page - 1])
+	except:
+		return 'IndexError'
 if __name__ == '__main__':
 	app.run(debug=True)
 """
