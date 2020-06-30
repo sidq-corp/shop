@@ -1,6 +1,7 @@
 <template>
 	<div class="home">
 		<Search />
+		{{data}}
 	</div>
 </template>
 
@@ -18,11 +19,18 @@ export default {
 	components: {
 		Search,
 	},
+	data () {
+        return {
+            data: [0],
+        }
+    },
 	beforeCreate() {
-        axios.post('http://localhost:3001/GetArticle', 'lol', {})
-        .then(res => { // then print response status
-            this.ArticleArray = res.data
-        })
+		let $axios = axios.create({
+			baseURL: 'http://127.0.0.1:5000/get_main_api/1',
+			timeout: 5000,
+			headers: {'Content-Type': 'application/json'}
+		})
+		$axios.get().then(response => {this.data = response.data})	
     },
 	methods: {
         GetArticlesArray(){
