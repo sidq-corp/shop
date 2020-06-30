@@ -2,10 +2,12 @@
 	<div>	
 		<br>
 		<div class = 'croco-card'>
-			<div>
-				<h3>Покупки. Легко!</h3>
-				<input type="text" placeholder="Поиск">
-			</div>
+			<transition name="donald" appear>
+				<div>
+					<h3>Покупки. Легко!</h3>
+					<input type="text" placeholder="Поиск">
+				</div>
+			</transition>
 		</div>
 	</div>	
 		

@@ -12,8 +12,9 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/:id",
     name: "Home",
+    props: { id: 1 },
     component: Home
   },
   {
