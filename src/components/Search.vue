@@ -19,9 +19,9 @@
         height: 200px;
 		display: table;
 		padding-bottom: 40px;
+		margin-bottom: 30px;
 
 		font-weight: 700;
-
 		font-family: 'Montserrat', sans-serif;
 		color: #57E3F4;
         background: linear-gradient(to top, rgba(87, 227, 244,0.5) 0%,#ffffff 50%);
@@ -54,39 +54,14 @@
 
 <script>
 export default {
-    name: "Search Component",
+    name: "Search",
     data () {
         return {
             // items: ['a', 'b', 'c']
         }
     },
-    // props: {
-    //     title: {
-	// 		type: String,
-	// 		required: true,
-	// 		default: '[TITLE]'
-	// 	}
-    // },
     methods: {
-        ErrorDismiss(index) {
-            this.$emit('error-remove',index)
-        },
-        processDate(date){
-            date = new Date(date);
-            var d = '0'+date.getDate();
-            var m = '0'+(date.getMonth()+1);
-            var y = date.getYear()%100;
-            console.log(y)
-            return d.substr(-2) + '/' + m.substr(-2) + '/' + y
-        },
-        processDesc(desc){
-            desc = desc + ''
-            if (desc.length > 200){
-                return desc.substring(0,200)+'...'
-            }else{
-                return desc
-            }
-        }
+
     }
 };
 </script>

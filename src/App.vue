@@ -57,7 +57,7 @@
 	.california{
 		height: 100%;
 		width: 40%;
-		/* outline: 3px solid yellow; */
+		/* outline: 2px solid yellow; */
 
 		background-color: #fff;
 		color: #57E3F4;
